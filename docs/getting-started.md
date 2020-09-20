@@ -1,7 +1,7 @@
 # Getting Started
 
 This project serves as a fully working and tested solution for deploying preview
-environments for your Pull Requests so you can get fast feedback before changes are merged to master. 
+environments for your Pull Requests so you can get fast feedback before changes are merged to master.
 This allows you to avoid having human approval inside your release pipeline to speed up delivery of changes merged to master.
 
 When the Preview Environment is up and running GitHub Action Bot will comment on your Pull Request
@@ -39,4 +39,3 @@ Entire source code is stored in **GitHub**'s [netguru-interview](https://github.
 [^6]: [Storing and distribution system for named Docker images.](https://hub.docker.com/)
 [^7]: [GitHub Actions enables you to create custom software development life cycle (SDLC) workflows directly in your GitHub repository.](https://docs.github.com/en/actions)
 [^8]: [Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.](https://argoproj.github.io/argo-cd/)
-

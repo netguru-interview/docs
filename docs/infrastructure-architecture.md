@@ -143,4 +143,3 @@ SSH to master with `eval $(terraform output ssh-master)`:
 ```sh
 eval $(terraform output ssh-master)
 ```
-

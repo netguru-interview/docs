@@ -1,3 +1,4 @@
+---
 site_name: Netguru Interview - Documentation
 repo_url: https://github.com/netguru-interview/docs
 strict: true
@@ -17,7 +18,7 @@ nav:
   - Overview: README.md
   - getting-started.md
   - Architecture:
-    - Infrastructure: infrastructure-architecture.md
-    - Application: application-architecture.md
+      - Infrastructure: infrastructure-architecture.md
+      - Application: application-architecture.md
   - helm-package.md
   - Example: preview-environment-example.md

@@ -19,4 +19,3 @@ Packaging of applicaion is done using Helm. For detailed description of Kubernet
 ### Example Preview Environment
 
 For detailed examples about what this projects can do and how example preview environment can be spinned up, please see our [documentation by example](preview-environment-example.md) page.
-
