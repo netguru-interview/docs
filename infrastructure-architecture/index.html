@@ -249,8 +249,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
-      Getting Started
+    <a href="../getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
     </a>
   </li>
 
@@ -370,8 +370,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../helm-package/" title="Helm Package" class="md-nav__link">
-      Helm Package
+    <a href="../helm-package/" title="Helm package" class="md-nav__link">
+      Helm package
     </a>
   </li>
 
@@ -458,21 +458,24 @@
                 <h1 id="infrastructure-architecture">Infrastructure Architecture<a class="headerlink" href="#infrastructure-architecture" title="Permanent link">&para;</a></h1>
 <h2 id="terraform-infrastructure-overview">Terraform Infrastructure Overview<a class="headerlink" href="#terraform-infrastructure-overview" title="Permanent link">&para;</a></h2>
 <p><img alt="diagram" src="../assets/infra.png" /></p>
-<p>A set of <a href="https://www.terraform.io/">terraform</a> modules deploy a secure, functional <a href="https://github.com/rancher/k3s">k3s</a> cluster on <a href="https://www.ovhcloud.com/en/public-cloud/">OVH</a>.</p>
+<p>A set of <a href="https://www.terraform.io/">terraform</a> modules deploy a secure,
+functional <a href="https://github.com/rancher/k3s">k3s</a> cluster on
+<a href="https://www.ovhcloud.com/en/public-cloud/">OVH</a>.</p>
 <h2 id="why-not-kubespray">Why not Kubespray?<a class="headerlink" href="#why-not-kubespray" title="Permanent link">&para;</a></h2>
-<p>Deployment follows the <a href="https://github.com/hobby-kube/guide">hobby-kube guidelines</a> for setting up a secure Kubernetes cluster.</p>
+<p>Deployment follows the <a href="https://github.com/hobby-kube/guide">hobby-kube
+guidelines</a> for setting up a secure
+Kubernetes cluster.</p>
 <p>Following cloud-native projects are installed as a part of deployment:</p>
 <ul>
 <li><a href="https://github.com/containous/traefik">traefik</a></li>
 <li><a href="https://github.com/jetstack/cert-manager">cert-manger</a></li>
-<li><a href="https://github.com/metallb/metallb">metallb</a>  </li>
-<li><a href="https://github.com/argoproj/argo-cd">argocd</a>  </li>
+<li><a href="https://github.com/metallb/metallb">metallb</a></li>
+<li><a href="https://github.com/argoproj/argo-cd">argocd</a></li>
 </ul>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
 <p>The following is required to be installed on your system:</p>
 <ul>
 <li>terraform</li>
-<li>wireguard</li>
 <li>jq</li>
 <li>kubectl</li>
 </ul>
@@ -482,12 +485,15 @@
 </code></pre></div>
 
 
-<p>Copy <a href="https://github.com/netguru-interview/terraform-k3s/blob/master/example.tfvars">example.tfvars</a> to terraform.tfvars</p>
+<p>Copy
+<a href="https://github.com/netguru-interview/terraform-k3s/blob/master/example.tfvars">example.tfvars</a>
+to terraform.tfvars</p>
 <div class="codehilite"><pre><span></span><code>$ cp example.tfvars terraform.tfvars
 </code></pre></div>
 
 
-<p>Using your favourite editor, update values in terraform.tfvars marked required:</p>
+<p>Using your favourite editor, update values in terraform.tfvars marked
+required:</p>
 <div class="codehilite"><pre><span></span><code>$ vim terraform.tfvars
 
 <span class="c1"># DNS Settings</span>
@@ -609,7 +615,7 @@ argocd           replicaset.apps/latest-argocd-repo-server-54d5499fc6           
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../getting-started/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -618,7 +624,7 @@ argocd           replicaset.apps/latest-argocd-repo-server-54d5499fc6           
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                Getting started
               </span>
             </div>
           </a>

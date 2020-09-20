@@ -249,8 +249,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
-      Getting Started
+    <a href="../getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
     </a>
   </li>
 
@@ -309,8 +309,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../helm-package/" title="Helm Package" class="md-nav__link">
-      Helm Package
+    <a href="../helm-package/" title="Helm package" class="md-nav__link">
+      Helm package
     </a>
   </li>
 
@@ -359,6 +359,26 @@
     What happens when a Preview Environment is created
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-argocd-preview-environment" title="Example ArgoCD Preview Environment" class="md-nav__link">
+    Example ArgoCD Preview Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-a-pull-request-is-closed" title="What happens when a Pull Request is closed" class="md-nav__link">
+    What happens when a Pull Request is closed
+  </a>
+  
 </li>
       
       
@@ -404,6 +424,26 @@
     What happens when a Preview Environment is created
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-argocd-preview-environment" title="Example ArgoCD Preview Environment" class="md-nav__link">
+    Example ArgoCD Preview Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-a-pull-request-is-closed" title="What happens when a Pull Request is closed" class="md-nav__link">
+    What happens when a Pull Request is closed
+  </a>
+  
 </li>
       
       
@@ -434,63 +474,85 @@ integrated development environment (IDE) and commit it to the source
 repository, such as GitHub. The process to generate a preview
 environment is typically like committing code in a traditional
 development environment:</p>
-<ol>
-<li>A developer makes a branch to their local cloned source repository to create a new feature:</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>git clone git@github.com:netguru-interview/blog.git
-<span class="nb">cd</span> blog
+<p>A developer makes a branch to their local cloned source repository to
+create a new feature:</p>
+<div class="codehilite"><pre><span></span><code>$ git clone git@github.com:netguru-interview/blog.git
+$ <span class="nb">cd</span> blog
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code>git checkout -b feature1
+<div class="codehilite"><pre><span></span><code>$ git checkout -b DEV-feature1
 </code></pre></div>
 
 
-<ol>
-<li>The developer makes changes to the source code in their branch and adds the affected files to the commit queue:</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>git add backend/flaskblog/models.py
+<p>The developer makes changes to the source code in their branch and adds
+the affected files to the commit queue:</p>
+<div class="codehilite"><pre><span></span><code>$ git add backend/flaskblog/models.py
 </code></pre></div>
 
 
-<ol>
-<li>The developer commits the files adding a comment about what has changed:</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>    git commit -m <span class="s2">&quot;added user model&quot;</span>
+<p>The developer commits the files adding a comment about what has changed:</p>
+<div class="codehilite"><pre><span></span><code>$ git commit -m <span class="s2">&quot;added user model&quot;</span>
 </code></pre></div>
 
 
-<ol>
-<li>The developer runs <code>git push</code> to send the code back to the remote  repository and create a pull request:</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>    git push origin feature1
+<p>The developer runs <code>git push</code> to send the code back to the remote
+repository and create a pull request:</p>
+<div class="codehilite"><pre><span></span><code>$ git push origin DEV-feature1
 </code></pre></div>
 
 
-<ol>
-<li>
-<p>Git CLI displays a link to create a pull request. The developer can highlight the URL, right-click and choose <em>Open URL</em> to see the GitHub page in their browser.</p>
-</li>
-<li>
-<p>GitHub Workflow creates a preview environment in the PR for the application changes and displays a link to evaluate the new feature:
-<div class="row">
-  <div class="col col-lg-9">
-    <img src="/images/pr-comment.png"/>
-  </div>
-</div></p>
-</li>
-</ol>
-<p>The preview environment is created whenever a pull request to master is created in the
-repository, allowing any relevant user to validate or evaluate features,
-bugfixes, or security hotfix. Then, as additional commits are added to the PR branch
-the preview environment is automatically updated.</p>
+<p>Git CLI displays a link to create a pull request. The developer can
+highlight the URL, right-click and choose <em>Open URL</em> to see the GitHub
+page in their browser.</p>
+<p>GitHub Workflow creates a preview environment in the PR for the
+application changes and displays a link to evaluate the new feature:
+<img alt="diagram" src="../assets/preview-env.png" /></p>
+<p>The preview environment is created whenever a pull request to master is
+created in the repository, allowing any relevant user to validate or
+evaluate features, bugfixes, or security hotfix. Then, as additional
+commits are added to the PR branch the preview environment is
+automatically updated.</p>
 <h2 id="what-happens-when-a-preview-environment-is-created">What happens when a Preview Environment is created<a class="headerlink" href="#what-happens-when-a-preview-environment-is-created" title="Permanent link">&para;</a></h2>
 <ul>
-<li>a new <a href="https://argoproj.github.io/argo-cd/core_concepts">ArgoCD Application</a> of kind <code>App</code> is created in a <code>ci</code> <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">kubernetes namespace</a> which shows up in the <a href="https://argoproj.github.io/argo-cd/getting_started/#creating-apps-via-cli">argocd app list</a> command so you can see which preview environments are active and switch into them to look around</li>
-<li>the Pull Request is built as a preview Docker image and deployed into the preview environment via <a href="https://github.com/netguru-interview/blog/blob/master/.github/workflows/ci.yaml">GitHub Workflow</a></li>
-<li>a comment is added to the Pull Request to let your team know the preview application is ready for testing with a link to open the application. So in one click your team members can try out the preview</li>
+<li>a new <a href="https://argoproj.github.io/argo-cd/core_concepts">ArgoCD
+    Application</a> of
+    kind <code>App</code> is created in a <code>ci</code> <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">kubernetes
+    namespace</a>
+    which shows up in the <a href="https://argoproj.github.io/argo-cd/getting_started/#creating-apps-via-cli">argocd app
+    list</a>
+    command so you can see which preview environments are active and
+    switch into them to look around:</li>
 </ul>
-<p><img src="/images/pr-comment.png" class="img-thumbnail"></p>
+<div class="codehilite"><pre><span></span><code>$ argocd app list  
+NAME       CLUSTER                         NAMESPACE  PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                                       PATH  TARGET
+preview-3  https://kubernetes.default.svc  ci         default  Synced  Healthy  Auto        &lt;none&gt;      https://github.com/netguru-interview/blog-helm-charts.git  .
+</code></pre></div>
+
+
+<ul>
+<li>the Pull Request is built as a preview Docker image and deployed
+    into the preview environment via <a href="https://github.com/netguru-interview/blog/blob/master/.github/workflows/ci.yaml">GitHub
+    Workflow</a></li>
+<li>a comment is added to the Pull Request to let your team know the
+    preview application is ready for testing with a link to open the
+    application. So in one click your team members can try out the
+    preview.</li>
+</ul>
+<h3 id="example-argocd-preview-environment">Example ArgoCD Preview Environment<a class="headerlink" href="#example-argocd-preview-environment" title="Permanent link">&para;</a></h3>
+<p><a href="../assets/argocd-example.png"><img alt="" src="../assets/argocd-example.png" /></a></p>
+<h2 id="what-happens-when-a-pull-request-is-closed">What happens when a Pull Request is closed<a class="headerlink" href="#what-happens-when-a-pull-request-is-closed" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Once Pull Request is merged or closed (declined) - preview
+    environment is automatically deleted and all underlying resources
+    are released. For this to happen, <a href="https://github.com/netguru-interview/blog/blob/master/.github/workflows/pr-closed.yaml">pr-closed
+    workflow</a>
+    is being executed when a specific event happens. For more
+    information, refer to <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">github workflow
+    documentation</a>,</li>
+<li>a comment is added to the Pull Request to let your team know the
+    preview environment is deleted.</li>
+</ul>
                 
                   
                 
@@ -511,7 +573,7 @@ the preview environment is automatically updated.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../helm-package/" title="Helm Package" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../helm-package/" title="Helm package" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -520,7 +582,7 @@ the preview environment is automatically updated.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Helm Package
+                Helm package
               </span>
             </div>
           </a>

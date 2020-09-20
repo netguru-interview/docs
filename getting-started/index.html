@@ -36,7 +36,7 @@
     
     
       
-        <title>Getting Started - Netguru Interview - Documentation</title>
+        <title>Getting started - Netguru Interview - Documentation</title>
       
     
     
@@ -127,7 +127,7 @@
               Netguru Interview - Documentation
             </span>
             <span class="md-header-nav__topic">
-              Getting Started
+              Getting started
             </span>
           
         </div>
@@ -258,11 +258,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Getting Started
+        Getting started
       </label>
     
-    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
-      Getting Started
+    <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
+      Getting started
     </a>
     
       
@@ -347,8 +347,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../helm-package/" title="Helm Package" class="md-nav__link">
-      Helm Package
+    <a href="../helm-package/" title="Helm package" class="md-nav__link">
+      Helm package
     </a>
   </li>
 
@@ -412,22 +412,33 @@
                 
                 
                 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>This project serves as a fully working and tested solution for deploying preview
-environments for your Pull Requests so you can get fast feedback before changes are merged to master. 
-This allows you to avoid having human approval inside your release pipeline to speed up delivery of changes merged to master.</p>
-<p>When the Preview Environment is up and running GitHub Action Bot will comment on your Pull Request
-with a link so in one click your team members can try out the preview.</p>
-<p>Typically the creation of preview environments is automated inside the GitHub Workflow of application source code repository.</p>
+<p>This project serves as a fully working and tested solution for deploying
+preview environments for your Pull Requests so you can get fast feedback
+before changes are merged to master. This allows you to avoid having
+human approval inside your release pipeline to speed up delivery of
+changes merged to master.</p>
+<p>When the Preview Environment is up and running GitHub Action Bot will
+comment on your Pull Request with a link so in one click your team
+members can try out the preview.</p>
+<p>Typically the creation of preview environments is automated inside the
+GitHub Workflow of application source code repository.</p>
 <h2 id="technologies-used">Technologies used<a class="headerlink" href="#technologies-used" title="Permanent link">&para;</a></h2>
-<p><strong>Terraform</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is used to provision infrastructure resources like VPC, compute instances, DNS records.</p>
-<p><strong>K3s</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> was chosen as a leightweight Kubernetes platform of choice for running applications in Cloud environment.</p>
+<p><strong>Terraform</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is used to provision infrastructure resources like
+VPC, compute instances, DNS records.</p>
+<p><strong>K3s</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> was chosen as a leightweight Kubernetes platform of choice
+for running applications in Cloud environment.</p>
 <p><strong>OVH</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> public cloud is used as a Cloud provider for hosting K3s.</p>
-<p><strong>DigitalOcean</strong><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> is used to mnanage DNS records of K3s cluster (exposing controller and infrastructure resources to the outside world)
-as well as smaller pieces like applications hosted on top of K3s (e.g. Traefik).</p>
-<p><strong>Flask</strong><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> is used as web framework to build an example application - Blog.</p>
+<p><strong>DigitalOcean</strong><sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> is used to mnanage DNS records of K3s cluster
+(exposing controller and infrastructure resources to the outside world)
+as well as smaller pieces like applications hosted on top of K3s
+(e.g. Traefik).</p>
+<p><strong>Flask</strong><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> is used as web framework to build an example application -
+Blog.</p>
 <p>All Docker images are stored in public <strong>DockerHub</strong><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> registry.</p>
-<p>Entire source code is stored in <strong>GitHub</strong>'s <a href="https://github.com/netguru-interview">netguru-interview</a> organisation.</p>
-<p><strong>GitHub Actions</strong><sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> are used for continuous integration, running tests, building application's Docker image.</p>
+<p>Entire source code is stored in <strong>GitHub</strong>'s
+<a href="https://github.com/netguru-interview">netguru-interview</a> organisation.</p>
+<p><strong>GitHub Actions</strong><sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> are used for continuous integration, running
+tests, building application's Docker image.</p>
 <p><strong>ArgoCD</strong><sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> is used for continuous deployment part of the process.</p>
 <div class="footnote">
 <hr />
@@ -436,25 +447,35 @@ as well as smaller pieces like applications hosted on top of K3s (e.g. Traefik).
 <p><a href="https://k3s.io/">K3s: Lightweight Kubernetes.</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="https://www.terraform.io/">Use Infrastructure as Code to provision and manage any cloud, infrastructure, or service.</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="https://www.terraform.io/">Use Infrastructure as Code to provision and manage any cloud,
+infrastructure, or service.</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p><a href="https://www.ovhcloud.com/en/public-cloud/">The OVHcloud Public Cloud offers you a large number of cloud solutions that are billed on a pay-as-you-go basis.</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="https://www.ovhcloud.com/en/public-cloud/">The OVHcloud Public Cloud offers you a large number of cloud
+solutions that are billed on a pay-as-you-go
+basis.</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p><a href="https://www.digitalocean.com/docs/networking/dns/">DigitalOcean's DNS tools let you manage DNS records for non-DigitalOcean resources.</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p><a href="https://www.digitalocean.com/docs/networking/dns/">DigitalOcean's DNS tools let you manage DNS records for
+non-DigitalOcean
+resources.</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5">
-<p><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask is a micro web framework written in Python.</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask is a micro web framework written in
+Python.</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p><a href="https://hub.docker.com/">Storing and distribution system for named Docker images.</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p><a href="https://hub.docker.com/">Storing and distribution system for named Docker
+images.</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p><a href="https://docs.github.com/en/actions">GitHub Actions enables you to create custom software development life cycle (SDLC) workflows directly in your GitHub repository.</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p><a href="https://docs.github.com/en/actions">GitHub Actions enables you to create custom software development
+life cycle (SDLC) workflows directly in your GitHub
+repository.</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
-<p><a href="https://argoproj.github.io/argo-cd/">Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p><a href="https://argoproj.github.io/argo-cd/">Argo CD is a declarative, GitOps continuous delivery tool for
+Kubernetes.</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
