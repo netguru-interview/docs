@@ -1,47 +1,59 @@
-# Infrastructure Architecture
+Infrastructure Architecture
+===========================
 
-## Terraform Infrastructure Overview
+Terraform Infrastructure Overview
+---------------------------------
 
 ![diagram](assets/infra.png)
 
-A set of [terraform](https://www.terraform.io/) modules deploy a secure, functional [k3s](https://github.com/rancher/k3s) cluster on [OVH](https://www.ovhcloud.com/en/public-cloud/).
+A set of [terraform](https://www.terraform.io/) modules deploy a secure,
+functional [k3s](https://github.com/rancher/k3s) cluster on
+[OVH](https://www.ovhcloud.com/en/public-cloud/).
 
 Why not Kubespray?
----
+------------------
 
-Deployment follows the [hobby-kube guidelines](https://github.com/hobby-kube/guide) for setting up a secure Kubernetes cluster.
+Deployment follows the [hobby-kube
+guidelines](https://github.com/hobby-kube/guide) for setting up a secure
+Kubernetes cluster.
 
 Following cloud-native projects are installed as a part of deployment:
 
-* [traefik](https://github.com/containous/traefik)
-* [cert-manger](https://github.com/jetstack/cert-manager)
-* [metallb](https://github.com/metallb/metallb)  
-* [argocd](https://github.com/argoproj/argo-cd)  
+-   [traefik](https://github.com/containous/traefik)
+-   [cert-manger](https://github.com/jetstack/cert-manager)
+-   [metallb](https://github.com/metallb/metallb)
+-   [argocd](https://github.com/argoproj/argo-cd)
 
 Dependencies
----
+------------
+
 The following is required to be installed on your system:
 
-* terraform
-* wireguard
-* jq
-* kubectl
+-   terraform
+-   jq
+-   kubectl
 
 Deployment
----
+----------
+
 Clone the repository:
-```sh
+
+``` {.sh}
 $ git clone git@github.com:netguru-interview/terraform-k3s.git
 ```
 
-Copy [example.tfvars](https://github.com/netguru-interview/terraform-k3s/blob/master/example.tfvars) to terraform.tfvars
+Copy
+[example.tfvars](https://github.com/netguru-interview/terraform-k3s/blob/master/example.tfvars)
+to terraform.tfvars
 
-```sh
+``` {.sh}
 $ cp example.tfvars terraform.tfvars
 ```
 
-Using your favourite editor, update values in terraform.tfvars marked required:
-```sh
+Using your favourite editor, update values in terraform.tfvars marked
+required:
+
+``` {.sh}
 $ vim terraform.tfvars
 
 # DNS Settings
@@ -51,27 +63,32 @@ digitalocean_token    = <required>
 ```
 
 Run `terraform init` to initalize modules:
-```sh
+
+``` {.sh}
 $ terraform init
 ```
 
 Run `terraform plan` to view changes terraform will make:
-```sh
+
+``` {.sh}
 $ terraform apply
 ```
 
 Run `terraform apply` to create your resources:
-```sh
+
+``` {.sh}
 $ terraform apply --auto-approve
 ```
 
 Set `KUBECONFIG`:
-```sh
+
+``` {.sh}
 eval $(terraform output kubeconfig)
 ```
 
 Check resources `kubectl get po -A -o wide`
-```sh
+
+``` {.sh}
 NAMESPACE        NAME                                                        READY   STATUS    RESTARTS   AGE
 kube-system      pod/kube-flannel-ds-amd64-w6qx9                             1/1     Running   0          16h
 kube-system      pod/metrics-server-7566d596c8-xj86w                         1/1     Running   0          16h
@@ -140,6 +157,7 @@ argocd           replicaset.apps/latest-argocd-repo-server-54d5499fc6           
 ```
 
 SSH to master with `eval $(terraform output ssh-master)`:
-```sh
+
+``` {.sh}
 eval $(terraform output ssh-master)
 ```
