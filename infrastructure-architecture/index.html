@@ -1,0 +1,667 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Infrastructure - Netguru Interview - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,400i,700|">
+        <style>body,input{font-family:"Work Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#infrastructure-architecture" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Netguru Interview - Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Netguru Interview - Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              Infrastructure
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/netguru-interview/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Netguru Interview - Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Netguru Interview - Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/netguru-interview/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Architecture
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Infrastructure
+      </label>
+    
+    <a href="./" title="Infrastructure" class="md-nav__link md-nav__link--active">
+      Infrastructure
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-infrastructure-overview" title="Terraform Infrastructure Overview" class="md-nav__link">
+    Terraform Infrastructure Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-not-kubespray" title="Why not Kubespray?" class="md-nav__link">
+    Why not Kubespray?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" title="Deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../application-architecture/" title="Application" class="md-nav__link">
+      Application
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../helm-package/" title="Helm Package" class="md-nav__link">
+      Helm Package
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../preview-environment-example/" title="Example" class="md-nav__link">
+      Example
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-infrastructure-overview" title="Terraform Infrastructure Overview" class="md-nav__link">
+    Terraform Infrastructure Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-not-kubespray" title="Why not Kubespray?" class="md-nav__link">
+    Why not Kubespray?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" title="Deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/netguru-interview/docs/edit/master/docs/infrastructure-architecture.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="infrastructure-architecture">Infrastructure Architecture<a class="headerlink" href="#infrastructure-architecture" title="Permanent link">&para;</a></h1>
+<h2 id="terraform-infrastructure-overview">Terraform Infrastructure Overview<a class="headerlink" href="#terraform-infrastructure-overview" title="Permanent link">&para;</a></h2>
+<p><img alt="diagram" src="../assets/infra.png" /></p>
+<p>A set of <a href="https://www.terraform.io/">terraform</a> modules deploy a secure, functional <a href="https://github.com/rancher/k3s">k3s</a> cluster on <a href="https://www.ovhcloud.com/en/public-cloud/">OVH</a>.</p>
+<h2 id="why-not-kubespray">Why not Kubespray?<a class="headerlink" href="#why-not-kubespray" title="Permanent link">&para;</a></h2>
+<p>Deployment follows the <a href="https://github.com/hobby-kube/guide">hobby-kube guidelines</a> for setting up a secure Kubernetes cluster.</p>
+<p>Following cloud-native projects are installed as a part of deployment:</p>
+<ul>
+<li><a href="https://github.com/containous/traefik">traefik</a></li>
+<li><a href="https://github.com/jetstack/cert-manager">cert-manger</a></li>
+<li><a href="https://github.com/metallb/metallb">metallb</a>  </li>
+<li><a href="https://github.com/argoproj/argo-cd">argocd</a>  </li>
+</ul>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<p>The following is required to be installed on your system:</p>
+<ul>
+<li>terraform</li>
+<li>wireguard</li>
+<li>jq</li>
+<li>kubectl</li>
+</ul>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>Clone the repository:</p>
+<div class="codehilite"><pre><span></span><code>$ git clone git@github.com:netguru-interview/terraform-k3s.git
+</code></pre></div>
+
+
+<p>Copy <a href="https://github.com/netguru-interview/terraform-k3s/blob/master/example.tfvars">example.tfvars</a> to terraform.tfvars</p>
+<div class="codehilite"><pre><span></span><code>$ cp example.tfvars terraform.tfvars
+</code></pre></div>
+
+
+<p>Using your favourite editor, update values in terraform.tfvars marked required:</p>
+<div class="codehilite"><pre><span></span><code>$ vim terraform.tfvars
+
+<span class="c1"># DNS Settings</span>
+<span class="nv">create_zone</span>           <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
+<span class="nv">domain</span>                <span class="o">=</span> <span class="s2">&quot;kloud-native.com&quot;</span>
+<span class="nv">digitalocean_token</span>    <span class="o">=</span> &lt;required&gt;
+</code></pre></div>
+
+
+<p>Run <code>terraform init</code> to initalize modules:</p>
+<div class="codehilite"><pre><span></span><code>$ terraform init
+</code></pre></div>
+
+
+<p>Run <code>terraform plan</code> to view changes terraform will make:</p>
+<div class="codehilite"><pre><span></span><code>$ terraform apply
+</code></pre></div>
+
+
+<p>Run <code>terraform apply</code> to create your resources:</p>
+<div class="codehilite"><pre><span></span><code>$ terraform apply --auto-approve
+</code></pre></div>
+
+
+<p>Set <code>KUBECONFIG</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">eval</span> <span class="k">$(</span>terraform output kubeconfig<span class="k">)</span>
+</code></pre></div>
+
+
+<p>Check resources <code>kubectl get po -A -o wide</code></p>
+<div class="codehilite"><pre><span></span><code>NAMESPACE        NAME                                                        READY   STATUS    RESTARTS   AGE
+kube-system      pod/kube-flannel-ds-amd64-w6qx9                             <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+kube-system      pod/metrics-server-7566d596c8-xj86w                         <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+kube-system      pod/coredns-7944c66d8d-qnvcj                                <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+kube-system      pod/local-path-provisioner-6d59f47c7-s4pl6                  <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+kube-system      pod/kube-flannel-ds-amd64-n6vks                             <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+cert-manager     pod/cert-manager-cainjector-678b44fb8c-9mf9h                <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+cert-manager     pod/cert-manager-65b665b74d-8bjkg                           <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+cert-manager     pod/cert-manager-webhook-57d5ffc9cb-j8cbx                   <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+default          pod/traefik-cb68d6bf5-nlhzr                                 <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+argocd           pod/latest-argocd-redis-654b77c6cd-g6ffw                    <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+metallb-system   pod/controller-7694dcd576-kbqbq                             <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+metallb-system   pod/speaker-gjbpz                                           <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+metallb-system   pod/speaker-gf7tv                                           <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+argocd           pod/latest-argocd-application-controller-5b99488c78-hxpsq   <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+argocd           pod/latest-argocd-dex-server-9c65dfd7-brvvt                 <span class="m">1</span>/1     Running   <span class="m">3</span>          16h
+argocd           pod/latest-argocd-server-575d57c745-gv5w9                   <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+argocd           pod/latest-argocd-repo-server-54d5499fc6-8wrvs              <span class="m">1</span>/1     Running   <span class="m">0</span>          16h
+
+NAMESPACE      NAME                                           TYPE           CLUSTER-IP      EXTERNAL-IP    PORT<span class="o">(</span>S<span class="o">)</span>                      AGE
+default        service/kubernetes                             ClusterIP      <span class="m">10</span>.43.0.1       &lt;none&gt;         <span class="m">443</span>/TCP                      16h
+kube-system    service/kube-dns                               ClusterIP      <span class="m">10</span>.43.0.10      &lt;none&gt;         <span class="m">53</span>/UDP,53/TCP,9153/TCP       16h
+kube-system    service/metrics-server                         ClusterIP      <span class="m">10</span>.43.247.198   &lt;none&gt;         <span class="m">443</span>/TCP                      16h
+cert-manager   service/cert-manager                           ClusterIP      <span class="m">10</span>.43.236.173   &lt;none&gt;         <span class="m">9402</span>/TCP                     16h
+cert-manager   service/cert-manager-webhook                   ClusterIP      <span class="m">10</span>.43.208.42    &lt;none&gt;         <span class="m">443</span>/TCP                      16h
+argocd         service/latest-argocd-redis                    ClusterIP      <span class="m">10</span>.43.45.175    &lt;none&gt;         <span class="m">6379</span>/TCP                     16h
+argocd         service/latest-argocd-dex-server               ClusterIP      <span class="m">10</span>.43.2.73      &lt;none&gt;         <span class="m">5556</span>/TCP,5557/TCP            16h
+argocd         service/latest-argocd-server                   ClusterIP      <span class="m">10</span>.43.230.232   &lt;none&gt;         <span class="m">80</span>/TCP,443/TCP               16h
+argocd         service/latest-argocd-repo-server              ClusterIP      <span class="m">10</span>.43.197.228   &lt;none&gt;         <span class="m">8081</span>/TCP                     16h
+argocd         service/latest-argocd-application-controller   ClusterIP      <span class="m">10</span>.43.161.54    &lt;none&gt;         <span class="m">8082</span>/TCP                     16h
+default        service/traefik                                LoadBalancer   <span class="m">10</span>.43.66.104    &lt;redacted&gt;     <span class="m">80</span>:31722/TCP,443:30011/TCP   16h
+
+NAMESPACE        NAME                                   DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR                 AGE
+kube-system      daemonset.apps/kube-flannel-ds-amd64   <span class="m">2</span>         <span class="m">2</span>         <span class="m">2</span>       <span class="m">2</span>            <span class="m">2</span>           &lt;none&gt;                        16h
+metallb-system   daemonset.apps/speaker                 <span class="m">2</span>         <span class="m">2</span>         <span class="m">2</span>       <span class="m">2</span>            <span class="m">2</span>           beta.kubernetes.io/os<span class="o">=</span>linux   16h
+
+NAMESPACE        NAME                                                   READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system      deployment.apps/metrics-server                         <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+kube-system      deployment.apps/coredns                                <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+kube-system      deployment.apps/local-path-provisioner                 <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+cert-manager     deployment.apps/cert-manager-cainjector                <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+cert-manager     deployment.apps/cert-manager                           <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+cert-manager     deployment.apps/cert-manager-webhook                   <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+default          deployment.apps/traefik                                <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+argocd           deployment.apps/latest-argocd-redis                    <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+metallb-system   deployment.apps/controller                             <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+argocd           deployment.apps/latest-argocd-application-controller   <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+argocd           deployment.apps/latest-argocd-dex-server               <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+argocd           deployment.apps/latest-argocd-server                   <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+argocd           deployment.apps/latest-argocd-repo-server              <span class="m">1</span>/1     <span class="m">1</span>            <span class="m">1</span>           16h
+
+NAMESPACE        NAME                                                              DESIRED   CURRENT   READY   AGE
+kube-system      replicaset.apps/metrics-server-7566d596c8                         <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+kube-system      replicaset.apps/coredns-7944c66d8d                                <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+kube-system      replicaset.apps/local-path-provisioner-6d59f47c7                  <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+cert-manager     replicaset.apps/cert-manager-cainjector-678b44fb8c                <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+cert-manager     replicaset.apps/cert-manager-65b665b74d                           <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+cert-manager     replicaset.apps/cert-manager-webhook-57d5ffc9cb                   <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+default          replicaset.apps/traefik-cb68d6bf5                                 <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+argocd           replicaset.apps/latest-argocd-redis-654b77c6cd                    <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+metallb-system   replicaset.apps/controller-7694dcd576                             <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+argocd           replicaset.apps/latest-argocd-application-controller-5b99488c78   <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+argocd           replicaset.apps/latest-argocd-dex-server-9c65dfd7                 <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+argocd           replicaset.apps/latest-argocd-server-575d57c745                   <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+argocd           replicaset.apps/latest-argocd-repo-server-54d5499fc6              <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       16h
+</code></pre></div>
+
+
+<p>SSH to master with <code>eval $(terraform output ssh-master)</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">eval</span> <span class="k">$(</span>terraform output ssh-master<span class="k">)</span>
+</code></pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../application-architecture/" title="Application" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Application
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
