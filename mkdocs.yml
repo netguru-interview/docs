@@ -1,0 +1,23 @@
+site_name: Netguru Interview - Documentation
+repo_url: https://github.com/netguru-interview/docs
+strict: true
+theme:
+  name: material
+  palette:
+    primary: blue
+  font:
+    text: Work Sans
+markdown_extensions:
+  - codehilite
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+nav:
+  - Overview: README.md
+  - getting-started.md
+  - Architecture:
+    - Infrastructure: infrastructure-architecture.md
+    - Application: application-architecture.md
+  - helm-package.md
+  - Example: preview-environment-example.md
